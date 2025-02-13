@@ -1,0 +1,19 @@
+/* bugSolution.css */
+/* Solution: Using flexbox or grid for better control and predictability */
+div {
+display: flex;
+width: 50%;
+margin-right: 10px; /*Simulates the 10px reduction using margin instead of calc*/
+}
+
+/*Alternative solution, if avoiding flexbox, using viewport units as a workaround */
+div {
+  width: calc(50vw - 10px); /*Using viewport width instead of percentage.  Not always ideal but can be more consistent*/
+}
+
+/*Or, if possible, avoid mixing percentage and fixed units within calc().  Break into separate declarations*/
+div {
+  width: 50%;
+  margin-right: 10px;
+}
+/*This assumes that 10px reduction is equivalent to margin*/
